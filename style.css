@@ -1,70 +1,79 @@
-*{
-    margin :0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     /* font-family:; */
 
 }
-body{
-    
-     
+
+body {
+
+
+
     background: url('W2.avif') no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
     overflow-x: hidden;
 
 }
-header{
-    position:absolute;
-    top :0;
+
+header {
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
     padding: 30px 100px;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 
-.logo{
+.logo {
     font-size: 2em;
     color: #359381;
     pointer-events: none;
 }
-.navigation a{
+
+.navigation a {
     text-decoration: none;
     color: #359381;
     padding: 6px 15px;
-    border-radius: 20px ;
-    margin:0 10px;
+    border-radius: 20px;
+    margin: 0 10px;
     font-weight: 600;
     transition: 0.6s;
 }
-.navigation a:hover, 
-.navigation a.active{
 
-    background:#359381;
+.navigation a:hover,
+.navigation a.active {
+
+    background: #359381;
     color: #fff;
 }
-.parallax{
+
+.parallax {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden ;
+    height: auto;
+    overflow: hidden;
 
 }
-#text{
-    position:absolute;
+
+#text {
+    position: absolute;
     font-size: 5em;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     z-index: 1;
 }
-.parallax img{
+
+.parallax img {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -72,32 +81,74 @@ header{
     pointer-events: none;
     z-index: 0;
 }
-.sec{
+
+.sec {
     position: relative;
     padding: 100px;
 }
-.sec h2{
+
+.sec h2 {
     font-size: 3em;
     color: #fff;
     margin-bottom: 10px;
 }
-.sec p{
+
+.sec p {
     font-size: 1em;
     color: #fff;
     font-weight: 300;
 }
+
 /* glassmorphism */
-.glasscontainer{
+.glasscontainer {
     position: relative;
     z-index: 3;
     width: 90%;
+    height: auto;
+
     padding: 40px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
     color: #fff;
     margin-top: 250px;
+}
+
+.reveal {
+    width: 80%;
+    max-width: 600px;
+    height: 400px;
+    background: #3498db;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+
+    /* Animation properties */
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    transition: all 0.8s ease-out;
+}
+
+/* 2. THE VISIBLE STATE */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+#box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 20px;
+    
+}
+.image{
+    cursor: pointer;
 }
